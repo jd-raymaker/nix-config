@@ -1,6 +1,10 @@
 {
   description = "A very basic flake";
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+  inputs.home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+  };
 
   outputs = { self, nixpkgs, ... }: {
     nixosConfigurations = {
