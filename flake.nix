@@ -14,6 +14,7 @@
           ./hosts/vm-devbox/hardware-configuration.nix
 	  ./hosts/vm-devbox/default.nix
 	  ./common/default.nix
+	  ./common/home-manager.nix
         ];
       };
     };

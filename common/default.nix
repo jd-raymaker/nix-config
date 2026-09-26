@@ -5,11 +5,6 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      <home-manager/nixos>
-    ];
-
   # Bootloader.
   boot.loader = {
     systemd-boot.enable = false;
@@ -78,28 +73,6 @@
     isNormalUser = true;
     description = "JayDee";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
-    #packages = with pkgs; [
-    #  thunderbird
-    #];
-  };
-
-  # Home-Manager config
-  home-manager.useGlobalPkgs = true;
-  home-manager.useUserPackages = true;
-  home-manager.users."jaydee" = {pkgs, ...}: {
-    programs.kitty = {
-      enable = true;
-      enableGitIntegration = true;
-      themeFile = "base2tone-suburb-dark";
-      settings = {
-        enable_audio_bell = false;
-        background_opacity = 0.95;
-	confirm_os_window_close = 0;
-      };
-    };  
-    # The state version is required and should stay at the version you
-    # originally installed.
-    home.stateVersion = "26.05";
   };
 
   # Shell
@@ -130,7 +103,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    home-manager
     direnv
     neovim
     kitty
