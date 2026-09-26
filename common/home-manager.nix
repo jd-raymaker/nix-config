@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ home-manager, pkgs, ... }:
 
 let
   myUser = "jaydee";
@@ -6,8 +6,7 @@ let
 in
 {
   imports = [
-    # Pulls the module directly out of the flake input
-    inputs.home-manager.nixosModules.home-manager
+    home-manager.nixosModules.home-manager
   ];
 
   # Centralized Home Manager system settings
