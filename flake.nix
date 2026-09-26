@@ -11,6 +11,7 @@
 	  ./hosts/vm-devbox/default.nix
 	  ./common/default.nix
         ];
+      };
     };
   };
 }
