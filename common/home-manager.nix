@@ -13,7 +13,7 @@ in
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    
+
     # Define your system users here
     users.${myUser} = {
       home.username = myUser;
@@ -27,7 +27,7 @@ in
         settings = {
           enable_audio_bell = false;
           background_opacity = 0.95;
-	  confirm_os_window_close = 0;
+	        confirm_os_window_close = 0;
         };
       };
 
