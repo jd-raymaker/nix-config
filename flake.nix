@@ -19,6 +19,16 @@
           ./common/home-manager.nix
         ];
       };
+      swifty = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit home-manager; };
+        modules = [
+          ./common/default.nix
+          ./common/home-manager.nix
+          ./hosts/swifty/default.nix
+          ./hosts/swifty/hardware-configuration.nix
+        ];
+      };
     };
   };
 }
