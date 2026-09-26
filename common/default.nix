@@ -88,11 +88,6 @@
     };
   };
   users.defaultUserShell = pkgs.zsh;
-  environment.shellAliases = {
-    rebuild = "sudo nixos-rebuild switch";
-    up = "sudo nixos-rebuild switch --upgrade";
-    upall = "sudo nixos-rebuild switch --upgrade-all";
-  };
 
   # Install firefox.
   programs.firefox.enable = false;
