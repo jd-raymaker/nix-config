@@ -10,7 +10,7 @@ nix.settings.experimental-features = [ "nix-command" "flakes" ];
 Then rebuild and switch
 `sudo nixos-rebuild switch`
 
-## How to rebuild for spesific machine
-`sudo nixos-rebuild switch --flake .#machine`
+## How to rebuild for specific host
+`sudo nixos-rebuild switch --flake .#hostname`
 
-Replace `#machine` with one of the `nixosConfigurations` in `flake.nix` (ex. `#vm-devbox`)
+Replace `#hostname` with your actual hostname (ex. `#laptop-bob`)
