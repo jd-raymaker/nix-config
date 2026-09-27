@@ -143,6 +143,7 @@
     git
     wl-clipboard
     xclip
+    vimPlugins.LazyVim
   ];
 
   # Virtualisation
