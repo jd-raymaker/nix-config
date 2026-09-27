@@ -89,6 +89,10 @@
     };
   };
 
+  environment.shellAliases = {
+    rebuild = "sudo nixos-rebuild switch --flake .";
+  };
+
   # Set program defaults
   programs.firefox.enable = false;
   programs.nix-ld.enable = true;
