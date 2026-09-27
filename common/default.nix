@@ -76,6 +76,7 @@
   };
 
   # Shell
+  users.defaultUserShell = pkgs.zsh;
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -87,10 +88,18 @@
       theme = "agnoster";
     };
   };
-  users.defaultUserShell = pkgs.zsh;
 
-  # Install firefox.
+  # Set program defaults
   programs.firefox.enable = false;
+  programs.nix-ld.enable = true;
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
+  programs.ssh.extraConfig = ''
+    Host *
+      SetEnv TERM=xterm
+  '';
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -99,7 +108,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     direnv
-    neovim
     kitty
     wget
     brave
