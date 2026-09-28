@@ -29,6 +29,26 @@
           ./hosts/swifty/hardware-configuration.nix
         ];
       };
+      lenowo = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit home-manager; };
+        modules = [
+          ./common/default.nix
+          ./common/home-manager.nix
+          ./hosts/lenowo/default.nix
+          ./hosts/lenowo/hardware-configuration.nix
+        ];
+      };
+      jd-systems = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit home-manager; };
+        modules = [
+          ./common/default.nix
+          ./common/home-manager.nix
+          ./hosts/jd-systems/default.nix
+          ./hosts/jd-systems/hardware-configuration.nix
+        ];
+      };
     };
   };
 }
