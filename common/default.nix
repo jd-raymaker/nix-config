@@ -31,6 +31,11 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  # Don't wait for dhcpd on boot
+  networking.dhcpcd.wait = "background";
+  # Stop blocking on network interfaces not needed for boot
+  systemd.network.wait-online.enable = false;
+  systemd.services.NetworkManager-wait-online.enable = false;
 
   # Set your time zone.
   time.timeZone = "Europe/Oslo";
