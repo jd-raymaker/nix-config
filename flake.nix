@@ -16,7 +16,8 @@
           ./hosts/vm-devbox/hardware-configuration.nix
           ./hosts/vm-devbox/default.nix
           ./common/default.nix
-          ./common/home-manager.nix
+          ./users/jaydee/default.nix
+          ./users/jaydee/home-manager.nix
         ];
       };
       swifty = nixpkgs.lib.nixosSystem {
@@ -24,11 +25,12 @@
         specialArgs = { inherit home-manager; };
         modules = [
           ./common/default.nix
-          ./common/home-manager.nix
           ./hosts/swifty/default.nix
           ./hosts/swifty/hardware-configuration.nix
           ./dev/docker.nix
           ./dev/vm.nix
+          ./users/jaydee/default.nix
+          ./users/jaydee/home-manager.nix
         ];
       };
       lenowo = nixpkgs.lib.nixosSystem {
@@ -36,10 +38,11 @@
         specialArgs = { inherit home-manager; };
         modules = [
           ./common/default.nix
-          ./common/home-manager.nix
           ./hosts/lenowo/default.nix
           ./hosts/lenowo/hardware-configuration.nix
           ./dev/docker.nix
+          ./users/jaydee/default.nix
+          ./users/jaydee/home-manager.nix
         ];
       };
       jd-systems = nixpkgs.lib.nixosSystem {
@@ -47,11 +50,12 @@
         specialArgs = { inherit home-manager; };
         modules = [
           ./common/default.nix
-          ./common/home-manager.nix
           ./hosts/jd-systems/default.nix
           ./hosts/jd-systems/hardware-configuration.nix
           ./dev/docker.nix
           ./dev/vm.nix
+          ./users/jaydee/default.nix
+          ./users/jaydee/home-manager.nix
         ];
       };
     };
