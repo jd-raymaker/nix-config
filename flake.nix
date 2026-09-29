@@ -27,6 +27,8 @@
           ./common/home-manager.nix
           ./hosts/swifty/default.nix
           ./hosts/swifty/hardware-configuration.nix
+          ./dev/docker.nix
+          ./dev/vm.nix
         ];
       };
       lenowo = nixpkgs.lib.nixosSystem {
@@ -37,6 +39,7 @@
           ./common/home-manager.nix
           ./hosts/lenowo/default.nix
           ./hosts/lenowo/hardware-configuration.nix
+          ./dev/docker.nix
         ];
       };
       jd-systems = nixpkgs.lib.nixosSystem {
@@ -47,6 +50,8 @@
           ./common/home-manager.nix
           ./hosts/jd-systems/default.nix
           ./hosts/jd-systems/hardware-configuration.nix
+          ./dev/docker.nix
+          ./dev/vm.nix
         ];
       };
     };

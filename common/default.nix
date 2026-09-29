@@ -90,7 +90,7 @@
   users.users."jaydee" = {
     isNormalUser = true;
     description = "JayDee";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
   };
 
   # Shell
@@ -136,8 +136,6 @@
     discord
     element-desktop
     teamspeak6-client
-    remmina
-    wireshark
     obsidian
     mpv
     ffmpeg
@@ -161,12 +159,7 @@
     git
     wl-clipboard
     xclip
-    vimPlugins.LazyVim
   ];
-
-  # Virtualisation
-  virtualisation.docker.enable = true;
-  virtualisation.docker.storageDriver = "btrfs";
 
   # Experimental Features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
