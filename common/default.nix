@@ -102,6 +102,7 @@
 
   environment.shellAliases = {
     rebuild = "sudo nixos-rebuild switch --flake .";
+    update = "sudo nixos-rebuild switch --flake github:jd-raymaker/nix-config";
   };
 
   # Set program defaults
