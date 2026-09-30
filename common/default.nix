@@ -155,7 +155,7 @@
     git
     wl-clipboard
     xclip
-    kdesu
+    kdePackages.kdesu
   ];
 
   # Experimental Features
