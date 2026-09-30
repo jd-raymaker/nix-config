@@ -39,6 +39,8 @@
     [ { device = "/dev/mapper/luks-be7202ef-8e64-4280-b86d-77a6bb3b2c05"; }
     ];
 
+  boot.initrd.luks.devices."luks-be7202ef-8e64-4280-b86d-77a6bb3b2c05".device = "/dev/disk/by-uuid/be7202ef-8e64-4280-b86d-77a6bb3b2c05";
+
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
