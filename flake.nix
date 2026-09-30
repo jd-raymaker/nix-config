@@ -50,6 +50,7 @@
         specialArgs = { inherit home-manager; };
         modules = [
           ./common/default.nix
+          ./common/amd-graphics.nix
           ./hosts/jd-systems/default.nix
           ./hosts/jd-systems/hardware-configuration.nix
           ./dev/docker.nix
