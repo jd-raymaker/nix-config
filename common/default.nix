@@ -155,6 +155,7 @@
     git
     wl-clipboard
     xclip
+    kdesu
   ];
 
   # Experimental Features
