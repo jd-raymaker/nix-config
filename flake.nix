@@ -29,6 +29,7 @@
           ./hosts/swifty/hardware-configuration.nix
           ./dev/docker.nix
           ./dev/vm.nix
+          ./dev/vmware.nix
           ./users/jaydee/default.nix
           ./users/jaydee/home-manager.nix
         ];
