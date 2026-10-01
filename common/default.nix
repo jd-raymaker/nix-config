@@ -22,6 +22,7 @@
   };
 
   security.polkit.enable = true;
+  security.polkit.enablePkexecWrapper = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
